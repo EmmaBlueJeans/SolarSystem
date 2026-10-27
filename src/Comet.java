@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.Random;
 
 
-public class Comet extends Celestial {
+public class Comet extends Celestial implements Movable {
     private double dx, dy, tailLength;
     private static final Random random = new Random();
     

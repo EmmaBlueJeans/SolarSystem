@@ -3,7 +3,7 @@ import java.awt.Graphics2D;
 import java.awt.Color;
 import java.util.Random;
 
-public class Asteroid extends Celestial {
+public class Asteroid extends Celestial implements Movable {
     private double dx, dy, rotationAngle, rotationSpeed;
     private static final Random random = new Random();
     
