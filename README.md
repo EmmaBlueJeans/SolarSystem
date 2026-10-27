@@ -39,19 +39,50 @@ src/
 └── BlackHole.java
 ```
 
-## Run locally
+## Clone and run locally
 
-**Prerequisite:** Java Development Kit (JDK) 17 or later.
+**Prerequisites:**
 
-From the repository root:
+- Git
+- Java Development Kit (JDK) 17 or later
+- A desktop environment capable of displaying a Java Swing window
+
+Confirm that both Java commands are available:
+
+```text
+java -version
+javac -version
+```
+
+### Windows PowerShell
+
+```powershell
+git clone https://github.com/EmmaBlueJeans/SolarSystem.git
+cd SolarSystem
+New-Item -ItemType Directory -Force out | Out-Null
+javac -d out (Get-ChildItem src -Filter *.java).FullName
+java -cp out GalaxyMain
+```
+
+### macOS or Linux
 
 ```bash
-mkdir out
+git clone https://github.com/EmmaBlueJeans/SolarSystem.git
+cd SolarSystem
+mkdir -p out
 javac -d out src/*.java
 java -cp out GalaxyMain
 ```
 
-Use the numbered console menu to add objects. Add at least one star before selecting **Simulate Current Galaxy**. Closing the visualization window exits the application.
+If Git is unavailable, use GitHub's **Code → Download ZIP** option, extract the archive, open a terminal in the extracted folder, and begin with the appropriate compile command above.
+
+### Using the simulation
+
+1. Use the numbered console menu to add celestial objects.
+2. Add at least one star before adding planets or launching the simulation.
+3. Add a planet before adding moons.
+4. Select **Simulate Current Galaxy** to open the animated Swing window.
+5. Closing the visualization window exits the application.
 
 ## Engineering decisions
 
